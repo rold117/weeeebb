@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Рецепт</title>
+	<script src="men.js"></script>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<section>
+	<img src="fone.jpg" alt="Перша сторінка">
+</section> 
+  </div>
+	<div class="header">
+        <a class="active" href="#home">Home</a>
+        <a href="https://www.unian.ua/recipes/first-courses/borscht/borshch-recept-recept-ukrajinskogo-chervonogo-borshchu-10976501.html">Більше Рецептів</a>
+        <a href="#contact">Новини</a>
+        <a href="#about">Регістрація</a>
+      </div>
+
+	<h1>Як приготувати справжній український борщ?</h1>
+	<p>Борщ – це культурне надбання України, наша гордість та кулінарний символ нашої країни. Бути байдужим до цього густого наваристого супу просто неможливо.
+	<p>Рецептів борщу існує безліч і ледь не кожна господиня має свій власний. Хтось любить борщ із квасолею, хтось готує без капусти, а хтось варить його з грибами. Доволі часто рецепти борщу в сім’ях дбайливо передаються з покоління в покоління, а деякі навіть тримаються у суворій таємниці</p>
+	<li>Свининa, яловичина – дo 1 кг</li>   
+    <li>Морква – 1 шт.</li>
+    <li>картопля – 2-3 шт.</li>
+	<li>квасоля – 1 cт.</li>   
+    <li>корінь петрушки, селера за смаком</li>
+    <li>буряк червоний – 1-2 шт.</li>
+	<li>червоний солодкий перець – 1 шт.</li>   
+    <li>часник – 2-3 зубчики</li>
+    <li>цибуля – 1 шт.</li>
+	<li>капуста білокачанна – 0,5 кoчaнa</li>   
+    <li>тoмaтнa пacтa – 2-3 cт. л.</li>
+    <li>cіль, чорний пepeць, зeлeнь, гострий пepeць, лaвpoвий лиcт, зeлeнь пeтpушки і кропу, cмeтaнa – все за смаком.</li>
+	<p>Спершу варимо бульйон. У каструлю наливаємо 1,5-2 літра води. Додаємо м’ясо й ставимо на середній вогонь. Перед закипанням знімаємо піну. Щойно бульйон закипить, накриваємо кришкою і варимо на повільному вогні годину-півтори.</p>
+	<p>Тим часом готуємо засмажку. Чистимо буряк, моркву та цибулю. Буряк натираємо на крупній тертці, а моркву – на середній. Цибулю нарізаємо кубиками. На середньому вогні в сковороді розігріваємо олію, висипаємо туди цибулю та моркву, смажимо 5 хвилин. Потім додаємо буряк (його можна посипати лимонною кислотою або збризнути соком свіжого лимона – так борщ буде по-справжньому червоним). Смажимо овочі ще 5 хвилин, додаємо томатну пасту, перемішуємо й смажимо все ще 5-7 хвилин.</p>
+    <p>А тепер варимо сам борщ. З бульйону виймаємо м’ясо і, поки воно холоне, кидаємо в бульйон нашатковану капусту. Через 5-10 хвилин додаємо нарізану соломкою картоплю. Відокремлюємо м’ясо від кістки й нарізаємо кубиками. Повертаємо м’ясо в борщ, солимо його і додаємо засмажку. Перемішуємо борщ, кладемо лавровий лист і дрібно посічену зелень, накриваємо кришкою та варимо все ще 5-7 хвилин.</p>>
+	<p>Подаємо борщ зі сметаною і зеленню.</p>
+	<script src="https://code.jquery.com/jquery-3.5.1.js">
+</script>
+<script>
+	$(window).scroll(function(){
+		var scroll=$(window).scrollTop();
+		$('img').css({filter:"blur("+(scroll/30)+"px)"})
+	})
+</script>
+<div id="current_date_time_block"></div>
+
+<script type="text/javascript">
+    
+    /* функция добавления ведущих нулей */
+    /* (если число меньше десяти, перед числом добавляем ноль) */
+    function zero_first_format(value)
+    {
+        if (value < 10)
+        {
+            value='0'+value;
+        }
+        return value;
+    }
+
+    /* функция получения текущей даты и времени */
+    function date_time()
+    {
+        var current_datetime = new Date();
+        var day = zero_first_format(current_datetime.getDate());
+        var month = zero_first_format(current_datetime.getMonth()+1);
+        var year = current_datetime.getFullYear();
+        var hours = zero_first_format(current_datetime.getHours());
+        var minutes = zero_first_format(current_datetime.getMinutes());
+        var seconds = zero_first_format(current_datetime.getSeconds());
+
+        return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
+    }
+</script>
+<div id="current_date_time_block2"></div>
+
+<script type="text/javascript">
+    
+    /* каждую секунду получаем текущую дату и время */
+    /* и вставляем значение в блок с id "current_date_time_block2" */
+    setInterval(function () {
+        document.getElementById('current_date_time_block2').innerHTML = date_time();
+    }, 1000);
+</script>
+<form name="comment" action="comment.php" method="post">
+	<p>
+	  <label>ім'я:</label>
+	  <input type="text" name="name" />
+	</p>
+	<p>
+	  <label>Текст:</label>
+	  <br />
+	  <textarea name="text_comment" cols="30" rows="50"></textarea>
+	</p>
+	<p>
+	  <input type="hidden" name="page_id" value="150" />
+	  <input type="submit" value="Отправить" />
+	</p>
+  </form>
+</body>
+</html>
